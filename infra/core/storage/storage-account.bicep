@@ -37,7 +37,7 @@ resource storage 'Microsoft.Storage/storageAccounts@2023-05-01' = {
 
   resource queueServices 'queueServices' = {
     name: 'default'
-    resource queue 'queues' = [for queueName in ['input', 'output']: {
+    resource queue 'queues' = [for queueName in ['input','output','inpute', 'outpute','inputd','outputd']: {
       name: queueName
     }]
   }
